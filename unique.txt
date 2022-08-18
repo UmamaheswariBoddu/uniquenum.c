@@ -1,0 +1,58 @@
+#include <stdio.h>
+int main()
+{
+    int arr1[100], n,ctr=0;
+    int i, j, k;
+     	
+       printf("The number of elements to be stored in the array: ");
+       scanf("%d",&n);
+       printf(" %d elements in the array :\n",n);
+       for(i=0;i<n;i++)
+            {
+	      printf("ele - %d : ",i);
+	      scanf("%d",&arr1[i]);
+	    }
+    printf("\nThe  elements  in the array are: \n");
+    for(i=0; i<n; i++)
+    {
+        ctr=0;
+        for(j=0,k=n; j<k+1; j++)
+        {
+            if (i!=j)
+            {
+		       if(arr1[i]==arr1[j])
+              {
+                 ctr++;
+               }
+             }
+        }
+       if(ctr==0)
+        {
+          printf("%d ",arr1[i]);
+          printf("\nUNIQUE\n");
+        }
+       else
+        {
+       	printf("%d ",arr1[i]);
+       printf("\nDUPLICATE\n");
+        }
+}
+    }
+    
+_____________________________________
+OUTPUT:
+The number of elements to be stored in the array:4
+4 elements into the array:
+ele-0:3
+ele-1:2
+ele-2:2
+ele-3:5
+the elements in the array are:
+3
+UNIQUE
+2
+DUPLICATE
+2
+DUPLICATE
+5
+UNIQUE
